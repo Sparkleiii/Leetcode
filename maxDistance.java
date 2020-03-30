@@ -17,8 +17,6 @@ public class maxDist {
      * 链接：https://leetcode-cn.com/problems/as-far-from-land-as-possible
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
-    //怎么思考这个问题
-
     /**
      * 使用广度优先遍历
      * 反向思考这个问题
@@ -62,7 +60,7 @@ public class maxDist {
                 if(newX<0 || newX >=n || newY<0 || newY>=n || grid[newX][newY]!=0){
                     continue;
                 }
-                //如果下一个是海洋，修改数组值+1，标记访问次数
+                //如果下一个是海洋，修改数组值为出发点的值+1
                 grid[newX][newY] = grid[x][y] + 1;
                 hasOcean = true;
                 queue.offer(new Cordinate(newX, newY));
